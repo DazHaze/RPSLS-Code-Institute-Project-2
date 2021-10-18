@@ -1,12 +1,24 @@
 var choices = ["rock", "paper", "scissors", "lizard", "spock"];
 
-for (let index = 0; index < choices.length; index++) {
-    const element = choices[index];
-    console.log(element);
-}
+document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementsByClassName("choice-btn");
+
+    for (let button of buttons){
+        button.addEventListener('click', function(){
+            if(this.getAttribute('data-type') == 'submit'){
+                checkAnswer();
+                
+            } else{
+                let userChoice = this.getAttribute('data-type');
+                CheckLogic(userChoice, "rock");
+            }
+        })
+    }
+})
+
 
 var userChoice = "spock";
-var computerChoice = "scissors";
+var computerChoice = "lizard";
 
 function CheckLogic(userChoice, computerChoice) {
     var winner = "";
@@ -41,12 +53,16 @@ function CheckLogic(userChoice, computerChoice) {
             winner = "user";
         } else if (userChoice === "scissors" && computerChoice === "spock") {
             winner = "computer";
+        } else if (userChoice === "scissors" && computerChoice === "lizard") {
+            winner = "user";
+        } else if (userChoice === "lizard" && computerChoice === "scissors") {
+            winner = "computer"
         } else {
             console.log(`Choice: "${userChoice}" is not a recogized type.`);
             throw `Choice: "${userChoice}" is not a recogized type.`;
         }
     }
+    console.log(winner);
     return winner;
+    
 }
-
-console.log(CheckLogic(userChoice, computerChoice));

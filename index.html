@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,31 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js"></script>
     <title>Document</title>
+
+    <!-- // Fonts // -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+    </style>
+
 </head>
+
 <body>
-    <span id="display-choice">
+    <header>Rock Paper Scissors Lizard Spock</header>
+
+    <div class="display-choice">
         <div>
-            <div class="display-card">Choice</div>
+            <p id="user-label">User</p>
+            <p id="computer-label">Computer</p>
+            <div id="score-label">0:0</div>
         </div>
-        <div>
-            <div class="display-card">Choice</div>
-        </div>
-    </span>
+    </div>
+    <div class="user-choices">
+        <div id="rock" data-type = "rock" class="choice-btn"></div>
+        <div id="paper" data-type = "paper" class="choice-btn"></div>
+        <div id="scissors" data-type = "scissors" class="choice-btn"></div>
+        <div id="lizard" data-type = "lizard" class="choice-btn"></div>
+        <div id="spock" data-type = "spock" class="choice-btn"></div>
+    </div>
 </body>
+
 </html>
