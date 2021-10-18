@@ -1,25 +1,6 @@
-body{
-    
-}
-
-#display-choice{
-    background: blue;
-    width: 100%;
-    display: flex;
-}
-
-#display-choice div:nth-child(1){
-    flex-direction: row;
-    width: 50%;
-    height: 200px;
-    background: burlywood;
-}
-
-#display-choice div:nth-child(2){
-    flex-direction: row;
-    width: 50%;
-    height: 200px;
-    background: red;
+*{
+    margin: 0;
+    padding: 0;
 }
 
 
