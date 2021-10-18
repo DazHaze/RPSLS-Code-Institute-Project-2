@@ -1,27 +1,58 @@
+
 var choices = ["rock", "paper", "scissors", "lizard", "spock"];
+
+let userScore = 0;
+let computerScore = 0;
+let winner = '';
 
 document.addEventListener("DOMContentLoaded", function(){
     let buttons = document.getElementsByClassName("choice-btn");
 
     for (let button of buttons){
         button.addEventListener('click', function(){
-            if(this.getAttribute('data-type') == 'submit'){
-                checkAnswer();
-                
-            } else{
+
                 let userChoice = this.getAttribute('data-type');
-                CheckLogic(userChoice, "rock");
-            }
+                let compChoice = choices[parseInt(calculateComputerChoice())];
+                CheckLogic(userChoice, compChoice);
+                setUserChoiceImage(userChoice);
+                setComputerChoiceImage(compChoice)
+                updateScores(winner);
+
+                console.log(userScore, computerScore, winner);
+                
         })
     }
 })
 
+function updateScores(winner){
+    if(winner === "user"){
+        userScore = userScore + 1;
+        document.getElementById("score-label").innerHTML = `${userScore}:${computerScore}`;
+    }else if(winner === "computer"){
+        computerScore = computerScore + 1;
+        document.getElementById("score-label").innerHTML = `${userScore}:${computerScore}`;
+    }else{
+        return;
+    }
+}
 
-var userChoice = "spock";
-var computerChoice = "lizard";
+function calculateComputerChoice(){
+    let choice = Math.floor(Math.random() * 5);
+    return choice;
+}
+
+
+function setUserChoiceImage(userChoice){
+   let choiceImage =  document.getElementById("user-choice");
+   choiceImage.style.setProperty('background-image', `url(/assets/images/${userChoice}.png)`);
+}
+
+function setComputerChoiceImage(userChoice){
+    let choiceImage =  document.getElementById("computer-choice");
+    choiceImage.style.setProperty('background-image', `url(/assets/images/${userChoice}.png)`);
+ }
 
 function CheckLogic(userChoice, computerChoice) {
-    var winner = "";
     if (userChoice === computerChoice) {
         winner = "tie";
     } else {
@@ -32,6 +63,10 @@ function CheckLogic(userChoice, computerChoice) {
         } else if (userChoice === "rock" && computerChoice === "scissors") {
             winner = "user";
         } else if (userChoice === "scissors" && computerChoice === "rock") {
+            winner = "computer";
+        } else if (userChoice === "rock" && computerChoice === "lizard") {
+            winner = "user";
+        } else if (userChoice === "lizard" && computerChoice === "rock") {
             winner = "computer";
         } else if (userChoice === "scissors" && computerChoice === "paper") {
             winner = "user";
@@ -57,7 +92,11 @@ function CheckLogic(userChoice, computerChoice) {
             winner = "user";
         } else if (userChoice === "lizard" && computerChoice === "scissors") {
             winner = "computer"
-        } else {
+        } else if (userChoice === "paper" && computerChoice === "spock") {
+            winner = "user";
+        } else if (userChoice === "spock" && computerChoice === "paper") {
+            winner = "computer"
+        }else {
             console.log(`Choice: "${userChoice}" is not a recogized type.`);
             throw `Choice: "${userChoice}" is not a recogized type.`;
         }

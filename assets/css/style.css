@@ -112,4 +112,26 @@ header{
     background-position: center;
 }
 
+#user-choice{
+    left:15%;
+    height: 250px;
+    width: 250px;
+    border: white solid 5px;
+    position: absolute;
+    background-image: url("/assets/images/paper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#computer-choice{
+    left: 85%;
+    height: 250px;
+    width: 250px;
+    border: white solid 5px;
+    position: absolute;
+    background-image: url("/assets/images/paper.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
