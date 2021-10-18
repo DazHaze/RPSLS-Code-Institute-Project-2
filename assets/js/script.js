@@ -98,12 +98,12 @@ function calculateComputerChoice(){
 
 function setUserChoiceImage(userChoice){
    let choiceImage =  document.getElementById("user-choice");
-   choiceImage.style.setProperty('background-image', `url(/assets/images/${userChoice}.png)`);
+   choiceImage.style.setProperty('background-image', `url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/${userChoice}.png)`);
 }
 
 function setComputerChoiceImage(userChoice){
     let choiceImage =  document.getElementById("computer-choice");
-    choiceImage.style.setProperty('background-image', `url(/assets/images/${userChoice}.png)`);
+    choiceImage.style.setProperty('background-image', `url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/${userChoice}.png)`);
  }
 
 function CheckLogic(userChoice, computerChoice) {
