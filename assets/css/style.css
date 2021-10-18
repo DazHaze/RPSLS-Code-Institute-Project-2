@@ -3,11 +3,17 @@
     padding: 0;
 }
 
+:root {
+    --main-bg-color: #759AAB;
+    --purple-accent-color: white;
+    --light-yellow-accent-color:white;
+  }
+
 header{
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
-    background: beige;
+    background: var(--light-yellow-accent-color);
     color: black;
     padding: 30px;
     letter-spacing: 5px;
@@ -17,7 +23,7 @@ header{
 .display-choice{
     width: 100%;
     height: 300px;
-    background: cadetblue;
+    background: var(--main-bg-color);
     position: relative;
 }
 
@@ -25,7 +31,7 @@ header{
     height: 80%;
     width: 33%;
     margin: 0;
-    border: white solid 5px;
+    border: var(--purple-accent-color) solid 5px;
     
 
     position: absolute;
@@ -36,27 +42,37 @@ header{
 }
 
 #user-label{
-    background: beige;
+    color: beige;
+    background: var(--main-bg-color);
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 
     position: absolute;
     top: 40%;
-    left: -25px;
+    left: -45px;
 
-    font-size: 1.5rem;
-    padding: 3px;
+    font-size: 3rem;
+    padding: 10px;
     border-radius: 20px;
+
+    border: var(--purple-accent-color) solid 4px;
 }
 
 #computer-label{
-    background: beige;
+    color: beige;
+    background: var(--main-bg-color);
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 
     position: absolute;
     top: 40%;
-    right: -50px;
+    right: -80px;
 
-    font-size: 1.5rem;
-    padding: 3px;
+    font-size: 3rem;
+    padding: 10px;
     border-radius: 20px;
+
+    border: var(--purple-accent-color) solid 4px;
 }
 
 #score-label{
@@ -72,7 +88,7 @@ header{
 }
 
 .user-choices{
-    background: cadetblue;
+    background: var(--main-bg-color);
     width: 100%;
     padding: 30px;
     height: auto;
@@ -106,7 +122,7 @@ header{
 
 .choice-btn{
     border-radius: 50%;
-    border: white solid 5px;
+    border: var(--purple-accent-color) solid 5px;
     padding: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -116,7 +132,7 @@ header{
     left:15%;
     height: 250px;
     width: 250px;
-    border: white solid 5px;
+    border: var(--purple-accent-color) solid 5px;
     position: absolute;
     background-image: url("/assets/images/paper.png");
     background-repeat: no-repeat;
@@ -127,11 +143,38 @@ header{
     left: 85%;
     height: 250px;
     width: 250px;
-    border: white solid 5px;
+    border: var(--purple-accent-color) solid 5px;
     position: absolute;
     background-image: url("/assets/images/paper.png");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#show-winner{
+    width: 100%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3rem;
+    background: var(--main-bg-color);
+    text-align: center;
+    color: beige;
+    padding-top: 100px;
+}
+
+footer{
+    background: var(--light-yellow-accent-color);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    bottom: 0;
+    padding: 50px 0 50px 0;
+}
+
+.blank-space{
+    background: var(--main-bg-color);
+    height: 200px;
+    width: 100%;
 }
 
 

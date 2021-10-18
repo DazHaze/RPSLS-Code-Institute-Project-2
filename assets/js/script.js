@@ -17,12 +17,23 @@ document.addEventListener("DOMContentLoaded", function(){
                 setUserChoiceImage(userChoice);
                 setComputerChoiceImage(compChoice)
                 updateScores(winner);
+                showWinner(winner);
 
                 console.log(userScore, computerScore, winner);
                 
         })
     }
 })
+
+function showWinner(winner){
+    if (winner === "user"){
+        document.getElementById("show-winner").innerHTML = `You beat the computer! <i class="far fa-laugh-beam"></i>`;
+    }else if(winner === "computer"){
+        document.getElementById("show-winner").innerHTML = `Haha! I bet you! <i class="far fa-smile-beam"></i>`;
+    }else{
+        document.getElementById("show-winner").innerHTML = "Great minds think alike!";
+    }
+}
 
 function updateScores(winner){
     if(winner === "user"){
