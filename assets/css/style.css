@@ -126,6 +126,14 @@ header{
     padding: 20px;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.3s ease;
+}
+
+.choice-btn:hover{
+    cursor: pointer;
+    background: beige;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #user-choice{
@@ -185,12 +193,19 @@ footer{
     color: beige;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     margin-top: 50px;
+    transition: all 0.3s ease;
 }
 
 .game-types div:nth-child(1){
     padding: 15px;
     border: white solid 5px;
     border-radius: 20px;
+}
+
+.game-types div:nth-child(1):hover{
+    color: black;
+    background: beige;
+    cursor: pointer;
 }
 
 .game-types div:nth-child(2){
@@ -203,10 +218,22 @@ footer{
     color: white;
 }
 
+.game-types div:nth-child(2):hover{
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+
 .game-types div:nth-child(3){
     padding: 15px;
     border: white solid 5px;
     border-radius: 20px;
+}
+
+.game-types div:nth-child(3):hover{
+    color: black;
+    background: beige;
+    cursor: pointer;
 }
 
 #you-are-playing{
