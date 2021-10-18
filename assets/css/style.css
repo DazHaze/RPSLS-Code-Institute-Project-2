@@ -105,19 +105,19 @@ header{
 }
 
 #rock{
-    background-image: url(/assets/images/rock.png);
+    background-image: url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/rock.png);
 }
 #paper{
-    background-image: url("assets/images/paper.png");
+    background-image: url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/paper.png);
 }
 #scissors{
-    background-image: url("assets/images/scissors.png");
+    background-image: url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/scissors.png);
 }
 #lizard{
-    background-image: url("assets/images/lizard.png");
+    background-image: url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/lizard.png);
 }
 #spock{
-    background-image: url("assets/images/spock.png");
+    background-image: url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/spock.png);
 }
 
 .choice-btn{
