@@ -4,9 +4,11 @@ var choices = ["rock", "paper", "scissors", "lizard", "spock"];
 let userScore = 0;
 let computerScore = 0;
 let winner = '';
+let maxScore = 3;
 
 document.addEventListener("DOMContentLoaded", function(){
     let buttons = document.getElementsByClassName("choice-btn");
+    let gameTypeButtons = document.getElementsByClassName("game-type-btn");
 
     for (let button of buttons){
         button.addEventListener('click', function(){
@@ -23,7 +25,38 @@ document.addEventListener("DOMContentLoaded", function(){
                 
         })
     }
+
+    for (let gameTypeButton of gameTypeButtons){
+        gameTypeButton.addEventListener('click', function(){
+            let typeChoice = this.getAttribute('data-type');
+            
+            CheckGameType(typeChoice);
+        })
+    }
 })
+
+function CheckGameType(gameType){
+    if(gameType === "reset"){
+        ResetGame();
+    } else {
+        maxScore = parseInt(gameType);
+        document.getElementById("you-are-playing").innerHTML = `You are playing first to ${maxScore}`;
+        console.log(maxScore);
+    }
+}
+
+function ResetGame(){
+    userScore = 0;
+    computerScore = 0;
+    maxScore = 3;
+
+    document.getElementById('show-winner').innerHTML = 'Click a button to begin!'
+    document.getElementById("score-label").innerHTML = '0:0';
+    document.getElementById("you-are-playing").innerHTML = `You are playing first to ${maxScore}`;
+
+
+
+}
 
 function showWinner(winner){
     if (winner === "user"){
@@ -32,6 +65,16 @@ function showWinner(winner){
         document.getElementById("show-winner").innerHTML = `Haha! I bet you! <i class="far fa-smile-beam"></i>`;
     }else{
         document.getElementById("show-winner").innerHTML = "Great minds think alike!";
+    }
+
+    if (userScore === maxScore){
+        alert("You Win!");
+        ResetGame();
+    }else if (computerScore === maxScore){
+        alert("The Computer Wins!")
+        ResetGame();
+    } else{
+        return;
     }
 }
 
