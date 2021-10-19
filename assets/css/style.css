@@ -96,7 +96,7 @@ header{
     text-align: center;
     justify-items: center;
     padding-bottom: 50px;
-    
+    gap: 2rem;
 }
 
 .user-choices div{
