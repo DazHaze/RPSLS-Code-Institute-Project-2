@@ -11,13 +11,13 @@
 
 header{
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
     background: var(--light-yellow-accent-color);
     color: black;
-    padding: 30px;
+    padding: 5px;
     letter-spacing: 5px;
-    word-spacing: 10px;
+    word-spacing: 30px;
 }
 
 .display-choice{
@@ -90,18 +90,21 @@ header{
 .user-choices{
     background: var(--main-bg-color);
     width: 100%;
-    padding: 30px;
     height: auto;
-    display: flex;
-    justify-content: center;
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    text-align: center;
+    justify-items: center;
+    padding-bottom: 50px;
     
 }
 
 .user-choices div{
-    height: 200px;
-    width: 200px;
-    flex-direction: row;
-    margin: 20px;
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    background-size: 100px 100px;
+    
 }
 
 #rock{
@@ -165,7 +168,6 @@ header{
     background: var(--main-bg-color);
     text-align: center;
     color: beige;
-    padding-top: 100px;
 }
 
 footer{
@@ -185,6 +187,7 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-top: 5px;
 }
 
 .game-types div{
@@ -192,7 +195,6 @@ footer{
     font-size: 3rem;
     color: beige;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    margin-top: 50px;
     transition: all 0.3s ease;
 }
 
@@ -208,9 +210,7 @@ footer{
     cursor: pointer;
 }
 
-.game-types div:nth-child(2){
-    margin: 50px 50px 0 50px;
-    
+.game-types div:nth-child(2){ 
     padding: 15px;
     border: black solid 5px;
     border-radius: 20px;
@@ -243,4 +243,50 @@ footer{
     left: 33%;
     top: 80%;
 }
+
+@media only screen and (max-width: 900px) {
+
+    .display-choice div:nth-child(1){
+        display: none;
+
+    }
+
+    .display-choice div:nth-child(2){
+        width: 80%;
+
+    }
+
+    #computer-choice{
+        display: none;
+    }
+
+    #computer-label{
+        font-size: 1.5rem;
+        left: 85%;
+        margin: 0;
+        right: -40px;
+        width: auto;
+    }
+
+    #user-label{
+        font-size: 1.5rem;
+        margin: 0;
+        width: auto;
+    }
+
+    .user-choices{
+        grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    }
+
+    .user-choices div{
+        width: 100px;
+        height: 100px;
+        background-size: 100px 100px;
+    }
+
+    #score-label{
+
+
+    }
+  }
 

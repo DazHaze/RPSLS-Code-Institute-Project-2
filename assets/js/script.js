@@ -40,7 +40,7 @@ function CheckGameType(gameType){
         ResetGame();
     } else {
         maxScore = parseInt(gameType);
-        document.getElementById("you-are-playing").innerHTML = `You are playing first to ${maxScore}`;
+        document.getElementById("you-are-playing").innerHTML = `First to ${maxScore}`;
         console.log(maxScore);
     }
 }
@@ -52,7 +52,7 @@ function ResetGame(){
 
     document.getElementById('show-winner').innerHTML = 'Click a button to begin!'
     document.getElementById("score-label").innerHTML = '0:0';
-    document.getElementById("you-are-playing").innerHTML = `You are playing first to ${maxScore}`;
+    document.getElementById("you-are-playing").innerHTML = `First to ${maxScore}`;
 
 
 
