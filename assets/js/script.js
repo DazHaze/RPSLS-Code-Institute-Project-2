@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 let userChoice = this.getAttribute('data-type');
                 let compChoice = choices[parseInt(calculateComputerChoice())];
                 CheckLogic(userChoice, compChoice);
+                DisplayTextChoices(userChoice, compChoice);
                 setUserChoiceImage(userChoice);
                 setComputerChoiceImage(compChoice)
                 updateScores(winner);
@@ -34,6 +35,11 @@ document.addEventListener("DOMContentLoaded", function(){
         })
     }
 })
+
+function DisplayTextChoices(userChoice, computerChoice){
+    document.getElementById('user-choice-text').innerHTML = userChoice;
+    document.getElementById('computer-choice-text').innerHTML = computerChoice;
+}
 
 function CheckGameType(gameType){
     if(gameType === "reset"){
