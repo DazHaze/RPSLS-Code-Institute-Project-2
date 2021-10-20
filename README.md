@@ -24,6 +24,8 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 
 ## Existing Features.
 
+> This section demonstrates features that are currently in the deployed version of the website.
+
 * Clear UI
     * Minimal text is key for a small mini-game like this one. The user has to intuitivly know what to do in order to play the game. This is why the UI is bold and clear for a great user experience. Below is an example of clear UI where the user choices are displayed as images. On desktop, while the mouse is hovered over the image is scaled up and a color is eased in. This indicates that this element can be clicked.
     ---
@@ -45,6 +47,21 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 ## Testing
 
 > This section is for how the website is tested for usability on various devices.
+
+* HTML
+    * No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdazhaze.github.io%2FRPSLS-Code-Institute-Project-2%2Findex.html)
+
+* CSS
+    * No errors were found when passing through the official [(Jigsaw) validator](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdazhaze.github.io%2FRPSLS-Code-Institute-Project-2%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
+
+* Lighthouse
+    * Using lighthouse validator we can see that all scores are greater than 90.
+    ---
+    ![Lighthouse Validator](/assets/images/readme/lighthouse-audit-results.png)
+    ---
+
+* JavaScript
+    * Running the JavaScript file script.js though [JS Hint](https://jshint.com/) shows that no errors are returned. Only warnings that are minor and not something that will break the project.
 
 ## Deployment
 
