@@ -38,6 +38,10 @@ The aim of this website is to create an interesting game using Javascript, HTML 
     ![Game Type](/assets/images/readme/game-type.png)
     ---
     * As seen in the image above a fun little message is also displayed for the user when the round is over.
+    ---
+    ![Mobile Score](/assets/images/readme/mobile-score.png)
+    ---
+    * On a mobile device it is not feasable to have the user and computer choices visible on either side of the score. After testing having them displayed underneath this also did not work due to the fact that the user would have to scroll too much. It was decided to display the choices as text above the score so there would still be feedback even if it wasn't displayed in image format.
 ## Testing
 
 > This section is for how the website is tested for usability on various devices.

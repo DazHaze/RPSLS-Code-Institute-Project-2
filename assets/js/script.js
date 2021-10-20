@@ -18,13 +18,13 @@ document.addEventListener("DOMContentLoaded", function(){
                 CheckLogic(userChoice, compChoice);
                 DisplayTextChoices(userChoice, compChoice);
                 setUserChoiceImage(userChoice);
-                setComputerChoiceImage(compChoice)
+                setComputerChoiceImage(compChoice);
                 updateScores(winner);
                 showWinner(winner);
 
                 console.log(userScore, computerScore, winner);
                 
-        })
+        });
     }
 
     for (let gameTypeButton of gameTypeButtons){
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function(){
             let typeChoice = this.getAttribute('data-type');
             
             CheckGameType(typeChoice);
-        })
+        });
     }
-})
+});
 
 function DisplayTextChoices(userChoice, computerChoice){
     document.getElementById('user-choice-text').innerHTML = userChoice;
@@ -151,11 +151,11 @@ function CheckLogic(userChoice, computerChoice) {
         } else if (userChoice === "scissors" && computerChoice === "lizard") {
             winner = "user";
         } else if (userChoice === "lizard" && computerChoice === "scissors") {
-            winner = "computer"
+            winner = "computer";
         } else if (userChoice === "paper" && computerChoice === "spock") {
             winner = "user";
         } else if (userChoice === "spock" && computerChoice === "paper") {
-            winner = "computer"
+            winner = "computer";
         }else {
             console.log(`Choice: "${userChoice}" is not a recogized type.`);
             throw `Choice: "${userChoice}" is not a recogized type.`;
