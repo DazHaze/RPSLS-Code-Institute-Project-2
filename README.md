@@ -75,7 +75,7 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 
 * While trying to stay away from global variables as much as possible I felt that for cleaner code and to prevent easy cheating I would create 4. These were; userScore, computerScore, winner and maxScore. The computer and user scores are self explanitory. The winner variable is populated when the main logic function is run to test if rock beats scissors. It returns a string of 'user' or 'computer'. Finally the maxScore holds either 3 or 5. This is based on which game-type the user chooses.
 
-### What could be made better?
+### What improvements could be made?
 
 > The main imporvement to make would be some patterns the computer makes that the user could learn so that the game could be more skill based. For example if the computer picked 'spock' at random then there could be a 1/3 chance that the user chooses spock again. If the user chose rock twice in a row then the computer "prefers" to play paper at a 4/1 likelyness. I think this would add replay value to the game and make it seem on surface level a lot more complex.
 
@@ -83,6 +83,9 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 
 > This section is for how the website is deployed.
 
+* While deploying the website some issues were enquountered. Mainly to do with scaling issues with different screen sizes. In the end it uses one media query that mainly switches between CSS Grid and Flexbox. This switch is due to lack of knowledge about FlexBox which seems to be a very powerful tool. An in-depth programme of FlexBox is definately next on my list after completing this project. 
+
+* While deploying it was easy to see that not all elements will be displayed on smaller screen sizes as the playability of the small game would have been ruined by design choices that were made for larger displays. Such as displaying the user and computer choice images beside the score.
 ___
 
 ## Credits
