@@ -63,6 +63,22 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 * JavaScript
     * Running the JavaScript file script.js though [JS Hint](https://jshint.com/) shows that no errors are returned. Only warnings that are minor and not something that will break the project.
 
+## Code
+> This section talks about how the game logic was made in JavaScript
+
+![Main Function](/assets/images/readme/JS-click-functions.png)
+
+* As the game logic only needs to run after the user has clicked one of the five choices available (rock, paper, scissors, lizard, spock) or the game types ( first to 3, first to five, or reset) then all of the logic can be run on these button clicks. In the image above we can see that a string of functions are run when the user clicks a choice. The logic was broken down into these smaller functions to make the code more readable and be able to handle errors easier. The logic for which choice beats which, for example rock beats scissors, is unfortunately a series of if/else statements as a more eloquent way was not found. Below is a an image of one of these small funtions.
+
+![Small Function](/assets/images/readme/update-scores-function.png)
+* This function increments the user or computer overall score by one. Then it will update the main displayed score accordingly.
+
+* While trying to stay away from global variables as much as possible I felt that for cleaner code and to prevent easy cheating I would create 4. These were; userScore, computerScore, winner and maxScore. The computer and user scores are self explanitory. The winner variable is populated when the main logic function is run to test if rock beats scissors. It returns a string of 'user' or 'computer'. Finally the maxScore holds either 3 or 5. This is based on which game-type the user chooses.
+
+### What could be made better?
+
+> The main imporvement to make would be some patterns the computer makes that the user could learn so that the game could be more skill based. For example if the computer picked 'spock' at random then there could be a 1/3 chance that the user chooses spock again. If the user chose rock twice in a row then the computer "prefers" to play paper at a 4/1 likelyness. I think this would add replay value to the game and make it seem on surface level a lot more complex.
+
 ## Deployment
 
 > This section is for how the website is deployed.
@@ -72,4 +88,8 @@ ___
 ## Credits
 
 * Darragh Hayes, developer.
+
+* The Rock, Paper, Scissors, Lizard, Spock, images were taken from a website called [PNG Egg](https://www.pngegg.com). The link to the original upload can be found [here](https://www.pngegg.com/en/png-iiamd).
+
+* In the initial design phase the layout of the game was inspired by this [video](https://www.youtube.com/watch?v=jaVNP3nIAv0&t=1372s) by YouTube creator [Whatsdev](https://www.youtube.com/channel/UC0tRdbXVDbhaRvZPKsRgmxg). It is important to not that no code was taken from this video and no steps were followed while creating my own code for this website.
 

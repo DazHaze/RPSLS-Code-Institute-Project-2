@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 let compChoice = choices[parseInt(calculateComputerChoice())];
                 CheckLogic(userChoice, compChoice);
                 DisplayTextChoices(userChoice, compChoice);
-                setUserChoiceImage(userChoice);
-                setComputerChoiceImage(compChoice);
+                SetChoiceImages(userChoice, compChoice)
                 updateScores(winner);
                 showWinner(winner);
 
@@ -41,16 +40,18 @@ function DisplayTextChoices(userChoice, computerChoice){
     document.getElementById('computer-choice-text').innerHTML = computerChoice;
 }
 
+/** Checks what the input of game-type is and changes game-type to relevent values. */
 function CheckGameType(gameType){
     if(gameType === "reset"){
         ResetGame();
     } else {
         maxScore = parseInt(gameType);
         document.getElementById("you-are-playing").innerHTML = `First to ${maxScore}`;
-        console.log(maxScore);
     }
 }
 
+
+/** Reset back to values displayed on opening page. */
 function ResetGame(){
     userScore = 0;
     computerScore = 0;
@@ -64,6 +65,7 @@ function ResetGame(){
 
 }
 
+/** Display message for round win and alert for overall win. Takes input of 'winner' which is a string of computer or user. */
 function showWinner(winner){
     if (winner === "user"){
         document.getElementById("show-winner").innerHTML = `You beat the computer! <i class="far fa-laugh-beam"></i>`;
@@ -84,6 +86,7 @@ function showWinner(winner){
     }
 }
 
+/** Increment player or computer score by 1 and display the total score. Takes input of 'Winner' which is a string of user or computer. */
 function updateScores(winner){
     if(winner === "user"){
         userScore = userScore + 1;
@@ -96,22 +99,22 @@ function updateScores(winner){
     }
 }
 
+/** A random number generator for 1 - 5 so that the computer choice can be determined. */
 function calculateComputerChoice(){
     let choice = Math.floor(Math.random() * 5);
     return choice;
 }
 
+/** This will set the choice images for the computer and the user. */
+function SetChoiceImages(userChoice, compChoice){
+    let userChoiceImage =  document.getElementById("user-choice");
+   userChoiceImage.style.setProperty('background-image', `url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/${userChoice}.png)`);
 
-function setUserChoiceImage(userChoice){
-   let choiceImage =  document.getElementById("user-choice");
-   choiceImage.style.setProperty('background-image', `url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/${userChoice}.png)`);
+   let compChoiceImage =  document.getElementById("computer-choice");
+   compChoiceImage.style.setProperty('background-image', `url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/${compChoice}.png)`);
 }
 
-function setComputerChoiceImage(userChoice){
-    let choiceImage =  document.getElementById("computer-choice");
-    choiceImage.style.setProperty('background-image', `url(https://raw.githubusercontent.com/DazHaze/RPSLS-Code-Institute-Project-2/main/assets/images/${userChoice}.png)`);
- }
-
+/** Use this to check if the user wins or loses by inputting a string for both players. */
 function CheckLogic(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         winner = "tie";
