@@ -55,7 +55,7 @@ The aim of this website is to create an interesting game using Javascript, HTML 
     * No errors were found when passing through the official [(Jigsaw) validator](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdazhaze.github.io%2FRPSLS-Code-Institute-Project-2%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=)
 
 * Lighthouse
-    * Using lighthouse validator we can see that all scores are greater than 90.
+    * Using lighthouse validator we can see that all scores are greater than 90 and most importantly, accessability is at 100!
     ---
     ![Lighthouse Validator](/assets/images/readme/lighthouse-audit-results.png)
     ---
