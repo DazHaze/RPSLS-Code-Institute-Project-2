@@ -251,7 +251,7 @@ footer{
 
 #user-choice-text{
     position: absolute;
-    left: 35%;
+    left: 30%;
 
     color:white;
     font-size: 2rem;
@@ -264,7 +264,7 @@ footer{
 
 #computer-choice-text{
     position: absolute;
-    left: 55%;
+    left:60%;
 
     color:white;
     font-size: 2rem;
