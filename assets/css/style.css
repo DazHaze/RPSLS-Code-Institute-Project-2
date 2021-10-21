@@ -42,7 +42,7 @@ header{
 }
 
 #user-label{
-    color: beige;
+    color: black;
     background: var(--main-bg-color);
 
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -59,7 +59,7 @@ header{
 }
 
 #computer-label{
-    color: beige;
+    color: black;
     background: var(--main-bg-color);
 
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -168,7 +168,7 @@ header{
     font-size: 3rem;
     background: var(--main-bg-color);
     text-align: center;
-    color: beige;
+    color: black;
 }
 
 footer{
@@ -194,7 +194,7 @@ footer{
 .game-types div{
     flex-direction: column;
     font-size: 2rem;
-    color: beige;
+    color: black;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     transition: all 0.3s ease;
 }
