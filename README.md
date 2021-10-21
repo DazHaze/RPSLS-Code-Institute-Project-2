@@ -14,7 +14,7 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 
 ### *Goals*
 * Interesting game for the user.
-* Succesful game loop with win and lose conditions.
+* Successful game loop with win and lose conditions.
 * logic that does not break no matter what the user selects.
 * correct use of Javascript.
 
@@ -27,7 +27,7 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 > This section demonstrates features that are currently in the deployed version of the website.
 
 * Clear UI
-    * Minimal text is key for a small mini-game like this one. The user has to intuitivly know what to do in order to play the game. This is why the UI is bold and clear for a great user experience. Below is an example of clear UI where the user choices are displayed as images. On desktop, while the mouse is hovered over the image is scaled up and a color is eased in. This indicates that this element can be clicked.
+    * Minimal text is key for a small mini-game like this one. The user has to intuitively know what to do in order to play the game. This is why the UI is bold and clear for a great user experience. Below is an example of clear UI where the user choices are displayed as images. On desktop, while the mouse is hovered over the image is scaled up and a color is eased in. This indicates that this element can be clicked.
     ---
     ![User Choices](/assets/images/readme/user-choices.png)
     ---
@@ -43,7 +43,7 @@ The aim of this website is to create an interesting game using Javascript, HTML 
     ---
     ![Mobile Score](/assets/images/readme/mobile-score.png)
     ---
-    * On a mobile device it is not feasable to have the user and computer choices visible on either side of the score. After testing having them displayed underneath this also did not work due to the fact that the user would have to scroll too much. It was decided to display the choices as text above the score so there would still be feedback even if it wasn't displayed in image format.
+    * On a mobile device it is not feasible to have the user and computer choices visible on either side of the score. After testing having them displayed underneath, this also did not work due to the fact that the user would have to scroll too much. It was decided to display the choices as text above the score, so there would still be feedback even if it wasn't displayed in image format.
 ## Testing
 
 > This section is for how the website is tested for usability on various devices.
@@ -83,10 +83,15 @@ The aim of this website is to create an interesting game using Javascript, HTML 
 
 > This section is for how the website is deployed.
 
-* While deploying the website some issues were enquountered. Mainly to do with scaling issues with different screen sizes. In the end it uses one media query that mainly switches between CSS Grid and Flexbox. This switch is due to lack of knowledge about FlexBox which seems to be a very powerful tool. An in-depth programme of FlexBox is definately next on my list after completing this project. 
+* While deploying the website, some issues were encountered. Mainly to do with scaling issues with different screen sizes. In the end it uses one media query that mainly switches between CSS Grid and Flexbox. This switch is due to lack of knowledge about FlexBox which seems to be a very powerful tool. An in-depth programme of FlexBox is definately next on my list after completing this project. 
 
 * While deploying it was easy to see that not all elements will be displayed on smaller screen sizes as the playability of the small game would have been ruined by design choices that were made for larger displays. Such as displaying the user and computer choice images beside the score.
 ___
+
+## User Testing
+
+* Testing was conducted by sending the website link to friends and asking them their thoughts and to test on different devices. This process was made easier as a discord server was used for conversations about it. The main points throughout was that the computer should have some predictability and that there was scaling issues in the beginning. The computer predictability unfortunately was not implemented due to time constraints, but the scaling issues were fixed in the end.
+
 
 ## Credits
 
