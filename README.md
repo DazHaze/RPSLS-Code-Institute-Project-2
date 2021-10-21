@@ -4,6 +4,10 @@
 
 Website - [Rock Paper Scissors Lizard Spock](https://dazhaze.github.io/RPSLS-Code-Institute-Project-2/)
 
+## Description
+
+Click the link above to play rock, paper, scissors, lizard, spock! It is a game of chance with two game modes. Give it a go and see if you can beat the computer, Goodluck!
+
 ## What is this website for?
 
 This website is being created to demonstrate my knowledge of JavaScript and manipulating the DOM after my second module in CodeInstitute.
